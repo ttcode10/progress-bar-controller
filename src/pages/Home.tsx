@@ -17,9 +17,9 @@ export const Home = () => (
 );
 
 const bars = [
-	{ name: 'Bar #1', value: 70 },
+	{ name: 'Bar #1', value: 140 },
 	{ name: 'Bar #2', value: 50 },
-	{ name: 'Bar #1', value: 75 },
+	{ name: 'Bar #1', value: -75 },
 ];
 
 const dropdownValues = ['Bar #1', 'Bar #2', 'Bar #3'];

@@ -4,7 +4,10 @@ import styled from 'styled-components';
 export const BarChart: React.FC<IBarChart> = ({ bars }) => (
 	<VerticalContainer>
 		{bars.map(({ name, value }) => (
-			<Bar key={name}>{value}%</Bar>
+			<ProgressBar key={name}>
+        <BarValue>{value}%</BarValue>
+				<BarFill $value={value} />
+			</ProgressBar>
 		))}
 	</VerticalContainer>
 );
@@ -27,18 +30,32 @@ const VerticalContainer = styled.div`
 	margin: 1rem 0;
 `;
 
-const Bar = styled.div`
+const ProgressBar = styled.div`
 	display: flex;
+  flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	font-family: 'Roboto Mono', sans-serif;
-	font-size: 1rem;
-	color: #000000;
-	background-color: #87cefa;
+	background-color: #ffffff;
 	border-radius: 2px;
 	margin: 0.5rem 0;
 	width: 350px;
 	height: 2rem;
-	line-height: 1rem;
 	border: 1px solid #bfc0c2;
+  position: relative;
 `;
+
+const BarFill = styled.div<{ $value: number }>`
+	width: ${(props) => (props.$value >= 100 ? 100 : (props.$value < 0 ? 0 : props.$value))}%;
+	background-color: ${(props) => (props.$value >= 100 ? '#ff6347' : '#87cefa')};
+  height: 2rem;
+  transition: width 0.5s ease-out;
+  z-index: 1;
+  position: absolute;
+`;
+
+const BarValue = styled.span`
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: #000000;
+  width: 100%;
+`
