@@ -4,7 +4,9 @@ import styled from 'styled-components';
 export const Dropdown: React.FC<IDropdown> = ({ name, values }) => (
 	<Select name={name ?? values[0]} id="dropdown">
 		{values.map((value) => (
-			<option value={value} key={value}>{value}</option>
+			<option value={value} key={value}>
+				{value}
+			</option>
 		))}
 	</Select>
 );
