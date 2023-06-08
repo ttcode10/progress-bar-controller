@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Heading, Button, Dropdown, BarChart } from '../components';
+import { calculateProgressValue } from '../utils';
 
 export const Home = () => {
 	const initialProgresses = [
@@ -25,11 +26,6 @@ export const Home = () => {
 	const handleDropdownSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		e.preventDefault();
 		setDropdownSelectedValue(e.target.value);
-	};
-
-	const calculateProgressValue = (initValue: number, pace: number) => {
-		const result = initValue + pace;
-		return result <= 0 ? 0 : result;
 	};
 
 	return (
