@@ -15,12 +15,14 @@ export const Home = () => {
 	const handleButtonClick = (value: number) => {
 		setProgresses(
 			progresses.map((progress) =>
-				progress.name === dropdownSelectedValue ? {...progress, value: progress.value + value} : progress
+				progress.name === dropdownSelectedValue
+					? { ...progress, value: progress.value + value }
+					: progress
 			)
 		);
 	};
 
-  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+	const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		e.preventDefault();
 		setDropdownSelectedValue(e.target.value);
 	};
