@@ -27,17 +27,21 @@ export const Home = () => {
 		setDropdownSelectedValue(e.target.value);
 	};
 
-  const calculateProgressValue = (initValue: number, pace: number) => {
-    const result = initValue + pace;
-    return result <= 0 ? 0 : result;
-  }
+	const calculateProgressValue = (initValue: number, pace: number) => {
+		const result = initValue + pace;
+		return result <= 0 ? 0 : result;
+	};
 
 	return (
 		<PageContainer>
 			<Heading>Progress Bars Demo</Heading>
 			<BarChart bars={progresses} />
 			<HorizontalWrapper>
-				<Dropdown values={barNames} selected={dropdownSelectedValue} handleSelect={handleDropdownSelect} />
+				<Dropdown
+					values={barNames}
+					selected={dropdownSelectedValue}
+					handleSelect={handleDropdownSelect}
+				/>
 				<Button onClick={() => handleButtonClick(-25)}>-25</Button>
 				<Button onClick={() => handleButtonClick(-10)}>-10</Button>
 				<Button onClick={() => handleButtonClick(+10)}>+10</Button>
