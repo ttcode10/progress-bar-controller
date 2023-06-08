@@ -1,6 +1,6 @@
 # Progress Bar Controller
 
-Adjust numbers and display the bar chart accordingly [Demo Link](https://progress-bar-controller.vercel.app)
+A progress bar controller. [Demo Link](https://progress-bar-controller.vercel.app)
 
 Built with
 <a href="http://react.dev/" target="_blank">![](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
@@ -33,11 +33,12 @@ Tasks
 ├── Deploy
 │   └── Setup vercel
 ├── Static UI
+│   ├── Set theme colors
 │   ├── Define basic components
 │   └── Static page with required components
-├── Interactive
+├── Interaction
 │   ├── Select bar to change item
-│   ├── Adjust values
+│   ├── Click button to adjust values
 │   └── Error handling when number exceeds limits
 ├── UX improvements
 │   ├── Responsive web
