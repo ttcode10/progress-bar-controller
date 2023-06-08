@@ -1,28 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Heading, Button, Dropdown, BarChart } from '../components';
 
-export const Home = () => (
-	<PageContainer>
-		<Heading>Progress Bars Demo</Heading>
-		<BarChart bars={bars} />
-		<HorizontalWrapper>
-			<Dropdown values={dropdownValues} />
-			<Button>-25</Button>
-			<Button>-10</Button>
-			<Button>+10</Button>
-			<Button>+25</Button>
-		</HorizontalWrapper>
-	</PageContainer>
-);
+export const Home = () => {
+	const initialProgresses = [
+		{ name: 'Bar #1', value: 140 },
+		{ name: 'Bar #2', value: 50 },
+		{ name: 'Bar #1', value: -75 },
+	];
+	const barNames = initialProgresses.map((progress) => progress.name);
+	const [dropdownSelectedValue, setDropdownSelectedValue] = useState(barNames[0]);
 
-const bars = [
-	{ name: 'Bar #1', value: 140 },
-	{ name: 'Bar #2', value: 50 },
-	{ name: 'Bar #1', value: -75 },
-];
+	const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+		e.preventDefault();
+		setDropdownSelectedValue(e.target.value);
+	};
 
-const dropdownValues = ['Bar #1', 'Bar #2', 'Bar #3'];
+	return (
+		<PageContainer>
+			<Heading>Progress Bars Demo</Heading>
+			<BarChart bars={initialProgresses} />
+			<HorizontalWrapper>
+				<Dropdown values={barNames} selected={dropdownSelectedValue} handleSelect={handleSelect} />
+				<Button>-25</Button>
+				<Button>-10</Button>
+				<Button>+10</Button>
+				<Button>+25</Button>
+			</HorizontalWrapper>
+		</PageContainer>
+	);
+};
 
 const PageContainer = styled.div`
 	display: flex;

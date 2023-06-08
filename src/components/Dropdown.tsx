@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Dropdown: React.FC<IDropdown> = ({ name, values }) => (
-	<Select name={name ?? values[0]} id="dropdown">
+export const Dropdown: React.FC<IDropdown> = ({ values, selected, handleSelect }) => (
+	<Select defaultValue={selected} onChange={handleSelect}>
 		{values.map((value) => (
 			<option value={value} key={value}>
 				{value}
@@ -12,8 +12,9 @@ export const Dropdown: React.FC<IDropdown> = ({ name, values }) => (
 );
 
 interface IDropdown {
-	name?: string;
 	values: string[];
+	selected?: string;
+	handleSelect: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const Select = styled.select`
