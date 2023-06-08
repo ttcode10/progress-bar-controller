@@ -4,9 +4,9 @@ import { Heading, Button, Dropdown, BarChart } from '../components';
 
 export const Home = () => {
 	const initialProgresses = [
-		{ name: 'Bar #1', value: 0 },
-		{ name: 'Bar #2', value: 0 },
-		{ name: 'Bar #3', value: 0 },
+		{ name: 'Bar #1', value: 25 },
+		{ name: 'Bar #2', value: 50 },
+		{ name: 'Bar #3', value: 75 },
 	];
 	const barNames = initialProgresses.map((progress) => progress.name);
 	const [dropdownSelectedValue, setDropdownSelectedValue] = useState(barNames[0]);
