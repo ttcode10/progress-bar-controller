@@ -1,2 +1,2 @@
-export { calculateProgressValue } from './calculateProgressValue';
-export { trimProgressBarWidth } from './trimProgressBarWidth';
+export { calculateProgressValue } from './businessHelper';
+export { trimProgressBarWidth, getComputedBarColor } from './styleHelper';

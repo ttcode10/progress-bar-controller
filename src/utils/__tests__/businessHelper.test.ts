@@ -1,4 +1,4 @@
-import { calculateProgressValue } from '../calculateProgressValue';
+import { calculateProgressValue } from '../businessHelper';
 
 describe('calculateProgressValue function', () => {
 	it('should be 0 if calculated result is LESS THAN 0', () => {
