@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../themes';
 
 export const BarChart: React.FC<IBarChart> = ({ bars }) => (
 	<VerticalContainer>
@@ -34,18 +35,18 @@ const ProgressBar = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #ffffff;
+	background-color: ${colors.white};
 	border-radius: 2px;
 	margin: 0.5rem 0;
 	width: 350px;
 	height: 2rem;
-	border: 1px solid #bfc0c2;
+	border: 1px solid ${colors.borderGray};
 	position: relative;
 `;
 
 const BarFill = styled.div<{ $value: number }>`
 	width: ${(props) => (props.$value >= 100 ? 100 : props.$value < 0 ? 0 : props.$value)}%;
-	background-color: ${(props) => (props.$value >= 100 ? '#ff6347' : '#87cefa')};
+	background-color: ${(props) => (props.$value >= 100 ? colors.tomatoRed : colors.oceanBlue)};
 	height: 2rem;
 	transition: width 0.5s ease-out;
 	z-index: 1;
@@ -56,6 +57,6 @@ const BarValue = styled.span`
 	position: absolute;
 	z-index: 2;
 	text-align: center;
-	color: #000000;
+	color: ${colors.black};
 	width: 100%;
 `;

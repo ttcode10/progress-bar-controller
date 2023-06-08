@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../themes';
 
 export const Dropdown: React.FC<IDropdown> = ({ values, selected, handleSelect }) => (
 	<Select defaultValue={selected} onChange={handleSelect}>
@@ -24,6 +25,6 @@ const Select = styled.select`
 	cursor: pointer;
 	margin: 0 0.5rem;
 	padding: 0 0.5rem;
-	background-color: #efefef;
+	background-color: ${colors.backgroundGray};
 	border-radius: 2px;
 `;
