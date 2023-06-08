@@ -13,6 +13,10 @@ export const BarChart: React.FC<IBarChart> = ({ bars }) => (
 	</VerticalContainer>
 );
 
+const trimProgressValue = (value: number) => {
+	return value >= 100 ? 100 : value < 0 ? 0 : value;
+};
+
 interface IBarChart {
 	bars: Bar[];
 }
@@ -45,7 +49,7 @@ const ProgressBar = styled.div`
 `;
 
 const BarFill = styled.div<{ $value: number }>`
-	width: ${(props) => (props.$value >= 100 ? 100 : props.$value < 0 ? 0 : props.$value)}%;
+	width: ${(props) => trimProgressValue(props.$value)}%;
 	background-color: ${(props) => (props.$value >= 100 ? colors.tomatoRed : colors.oceanBlue)};
 	height: 2rem;
 	transition: width 0.5s ease-out;
