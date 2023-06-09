@@ -108,12 +108,12 @@ describe('Home', () => {
 			expect(updatedBarLabel).toBeInTheDocument();
 		});
 
-		it('should allow above 100 for bar label', async () => {
+		it('should allow above 100 for bar label', () => {
 			render(<Home />);
 			const previousBarLabel = screen.getByText('25%');
 			expect(previousBarLabel).toBeInTheDocument();
 
-			const addButton = await screen.getByRole('button', { name: '+25' });
+			const addButton = screen.getByRole('button', { name: '+25' });
 			for (let i = 0; i < 4; i++) {
 				fireEvent.click(addButton);
 			}
