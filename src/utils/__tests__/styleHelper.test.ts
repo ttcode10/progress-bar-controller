@@ -12,10 +12,16 @@ describe('trimProgressBarWidth function', () => {
     expect(result).toBe(100);
   });
 
-  it('should be the EXACT value as given progress bar value', () => {
+  it('should be the 0 if progress bar value is LESS THAN 0', () => {
+    const result = trimProgressBarWidth(-75);
+    expect(result).toBe(0);
+  });
+
+  it('should be the EXACT value when the value is ranging from 0 to 100', () => {
     const result = trimProgressBarWidth(75);
     expect(result).toBe(75);
   });
+
 });
 
 describe('getComputedBarColor function', () => {
