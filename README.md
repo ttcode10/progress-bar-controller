@@ -62,3 +62,33 @@ Launches the test runner in the interactive watch mode.
 `npm test -- --coverage`
 
 View test coverage report.
+
+## Test coverage
+```
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+--------------------|---------|----------|---------|---------|-------------------
+All files           |   93.33 |       90 |   94.73 |   93.18 |                   
+src                 |       0 |      100 |       0 |       0 |                   
+App.tsx             |       0 |      100 |       0 |       0 | 5                 
+index.tsx           |       0 |      100 |     100 |       0 | 6-7               
+src/components      |     100 |      100 |     100 |     100 |                   
+BarChart.tsx        |     100 |      100 |     100 |     100 |                   
+Button.tsx          |     100 |      100 |     100 |     100 |                   
+Dropdown.tsx        |     100 |      100 |     100 |     100 |                   
+Text.tsx            |     100 |      100 |     100 |     100 |                   
+index.ts            |       0 |        0 |       0 |       0 |                   
+src/pages           |     100 |      100 |     100 |     100 |                   
+Home.tsx            |     100 |      100 |     100 |     100 |                   
+index.ts            |       0 |        0 |       0 |       0 |                   
+src/themes          |     100 |      100 |     100 |     100 |                   
+index.ts            |       0 |        0 |       0 |       0 |                   
+themes.ts           |     100 |      100 |     100 |     100 |                   
+src/utils           |     100 |     87.5 |     100 |     100 |                   
+businessHelper.ts   |     100 |      100 |     100 |     100 |                   
+index.ts            |       0 |        0 |       0 |       0 |                   
+styleHelper.ts      |     100 |    83.33 |     100 |     100 | 4                 
+--------------------|---------|----------|---------|---------|-------------------
+Test Suites: 3 passed, 3 total
+Tests:       19 passed, 19 total
+```
