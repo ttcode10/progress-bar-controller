@@ -9,6 +9,8 @@ Built with
 </a>
 <a href="https://styled-components.com/" target="_blank">![](https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styledcomponents&logoColor=white)
 </a>
+<a href="https://testing-library.com/" target="_blank">![](https://img.shields.io/badge/testinglibrary-E33332?style=flat-square&logo=testinglibrary&logoColor=white)
+</a>
 <a href="https://vercel.com/" target="_blank">![](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 </a>
 
