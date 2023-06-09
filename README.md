@@ -86,7 +86,7 @@ All files           |   93.33 |      100 |   94.73 |   93.18 |
  src/themes         |     100 |      100 |     100 |     100 |                   
   index.ts          |       0 |        0 |       0 |       0 |                   
   themes.ts         |     100 |      100 |     100 |     100 |                   
- src/utils          |     100 |     87.5 |     100 |     100 |                   
+ src/utils          |     100 |      100 |     100 |     100 |                   
   businessHelper.ts |     100 |      100 |     100 |     100 |                   
   index.ts          |       0 |        0 |       0 |       0 |                   
   styleHelper.ts    |     100 |      100 |     100 |     100 |                 
