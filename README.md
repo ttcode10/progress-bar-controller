@@ -23,7 +23,7 @@ Built with
 - Display usage amount, centered
 - Responsive design and mobile friendly
 - Animate the bar change, and make sure it works well when you tap buttons
-quickly.
+quickly
 
 ## Development Tasks
 ```
