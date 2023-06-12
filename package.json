@@ -27,7 +27,9 @@
     "prettier": "prettier --write src/**/*.{ts,tsx}",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ci:lint": "npm run lint",
+    "ci:test": "npm run test"
   },
   "eslintConfig": {
     "extends": [
